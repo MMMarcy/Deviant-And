@@ -79,8 +79,12 @@ public class DeviantHTTPClient {
         return authHandler.requestAuthorizationToken();
     }
 
-    public Boolean requestUserAccessToken(String authCode) {
+    public Optional<Token> requestUserAccessToken(String authCode) {
         return authHandler.requestUserAccessToken(authCode);
+    }
+
+    public void setOauthToken(Optional<Token> token){
+        authHandler.setAccessToken(token);
     }
 
 }

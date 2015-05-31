@@ -12,8 +12,6 @@ import com.google.common.base.Optional;
 import java.io.IOException;
 import java.util.Arrays;
 
-import mmmarcy.github.deviantand.net.DeviantHTTPClient;
-
 /**
  * Created by Marcello Steiner on 17/05/15.
  */
@@ -128,22 +126,21 @@ public class AuthenticationCodeHandler {
      * @param code The code obtained when the user accepted the application
      * @return The instance that must be used to perform the requests to the Deviant Art APIs
      */
-    public boolean requestUserAccessToken(String code) {
+    public Optional<Token> requestUserAccessToken(String code) {
         HttpResponse response;
         try {
             response = buildAccessTokenRequest(code).get().execute();
             Log.i(TAG, response.getStatusMessage());
             if (response.isSuccessStatusCode()) {
                 accessToken = Optional.of(response.parseAs(Token.class));
-                return true;
+                return accessToken;
             } else {
                 Log.wtf(TAG, response.parseAsString());
-                return false;
             }
         } catch (IOException e) {
             Log.wtf(TAG, Arrays.toString(e.getStackTrace()));
         }
-        return true;
+        return Optional.absent();
     }
 
     /**
@@ -163,6 +160,9 @@ public class AuthenticationCodeHandler {
 
     }
 
+    public void setAccessToken(Optional<Token> accessToken) {
+        this.accessToken = accessToken;
+    }
 
     /**
      * Builder class for the Auth Handler

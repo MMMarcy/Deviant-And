@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Token extends GenericJson implements Serializable {
 
     @Key
-    private Integer expires_in;
+    private Double expires_in;
 
     @Key
     private String status;

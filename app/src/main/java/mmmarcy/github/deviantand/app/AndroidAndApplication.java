@@ -17,6 +17,7 @@ public class AndroidAndApplication extends Application {
     public static final String OAUTH_PREFS = "oauth2";
     public static final String OAUTH_ID = "CLIENT_ID";
     public static final String OAUTH_SECRET = "CLIENT_SECRET";
+    public static final String OAUTH_TOKEN = "OAUTH_TOKEN";
     protected static AndroidAndApplication instance = null;
 
     @Override
