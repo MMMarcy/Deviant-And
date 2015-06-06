@@ -11,14 +11,14 @@ import mmmarcy.github.deviantand.R;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivity2ActivityFragment extends Fragment {
+public class TestFragment extends Fragment {
 
-    public MainActivity2ActivityFragment() {
+    public TestFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main_activity2, container, false);
+        return inflater.inflate(R.layout.fragment_test_fragment, container, false);
     }
 }
