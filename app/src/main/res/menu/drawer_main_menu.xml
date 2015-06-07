@@ -1,12 +1,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity2Activity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_item_1"
-            android:checked="true"
-            android:title="Test 1"/>
-        <item
+            android:id="@+id/navigation_header_browse"
+            android:checkable="false"
+            android:title="@string/navigation_header_browse">
+            <menu>
+                <item
+                    android:id="@+id/navigation_item_hot"
+                    android:title="@string/navigation_item_hot" />
+                <item
+                    android:id="@+id/navigation_item_newest"
+                    android:title="@string/navigation_item_newest" />
+                <item
+                    android:id="@+id/navigation_item_popular"
+                    android:title="@string/navigation_item_popular" />
+                <item
+                    android:id="@+id/navigation_item_daily"
+                    android:title="@string/navigation_item_daily" />
+                <item
+                    android:id="@+id/navigation_item_tags"
+                    android:title="@string/navigation_item_tags" />
+            </menu>
+        </item>
+        <!--<item
             android:id="@+id/navigation_item_2"
-            android:title="Test 2"/>
+            android:title="Test 2" />-->
     </group>
 </menu>

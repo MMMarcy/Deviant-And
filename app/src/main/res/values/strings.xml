@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Deviant AND</string>
+
+
+
+
+    <!-- Navigation Drawer entries -->
+    <string name="navigation_header_browse">Browse</string>
+    <string name="navigation_item_hot">Hot</string>
+    <string name="navigation_item_daily">Daily Deviations</string>
+    <string name="navigation_item_newest">Newest</string>
+    <string name="navigation_item_popular">Popular</string>
+    <string name="navigation_item_tags">Tags</string>
+
 </resources>
