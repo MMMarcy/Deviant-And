@@ -1,4 +1,4 @@
-package mmmarcy.github.deviantand.ui.activity;
+package mmmarcy.github.deviantand.ui.fragment;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import mmmarcy.github.deviantand.R;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class TestFragment extends Fragment {
+public class HotDeviationsFragment extends Fragment {
 
-    public TestFragment() {
+    public HotDeviationsFragment() {
     }
 
     @Override
